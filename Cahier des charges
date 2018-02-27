@@ -1,0 +1,33 @@
+INGARAO Adrien MALAQUIN Timothée MANCEAU Luc ALBRECHT Maxime
+
+Description du projet :
+
+On étudie la survivabilité d'un individu dans un milieu hostile en fonctions de différents paramètres et intéractions.
+
+Quels facteurs vont influer sur la survie d'un invididu ? Comment vont-ils modifier sa survivabilité ?
+
+Le principal phénomène d'étude est l'état de l'individu à chaque jours qui va directement influer sur sa survie.
+Les principaux paramètres mis en jeu sont les interactions entre les individus et leurs environnements.
+
+Pour la validation, concernant les animaux dangereux, on prend en compte leur population divisée par la superficie totale du pays,
+le nombre d'attaques/blessures par années afin d'estimer la probabilité de les rencontrer. Pareil par les animaux ''peacefull''
+On dispose de donnés rélles sur internet concernant différentes informations (humidité, température, temps de survie maximale
+d'un être humain sans eau/nourriture) 
+
+Concernant la modélisation, on va créer des bases de données pour les agents et les biomes.
+
+Pour les agents, en fonction de leur âge et de leur sexe choisis au préalable, on affectera des valeurs à leurs paramètres :
+capacité d'adaptation, capacité physique, santé.
+
+On envoie ensuite ces agents dans des biomes caractérisés par des paramètres.
+
+biomes : probabilité de rencontre avec des animaux(dangereux ou pas) , nourriture,eau, climat.
+
+Interactions : Probabilité de trouver de l'eau,  Probabilité de trouver de la nourriture,  Probabilité de tomber sur des animaux,
+Probabilité d'être sécouru. 
+En fonction des différents parametres de l'agent et du biome, ces probabilités vont varier.
+L'eau et la nourriture influe sur la santé, la capacité d'adaptation influe sur tous les parametres. Force physique influe sur chance 
+d'être bléssé ou d'être victorieux lors de la probabilité de rencontrer des animaux. (dangereux)
+(Probabilité de s'etablir, à faire varier la capacité d'adaptation -> bonus santé ?/autre)
+
+Taches et répartations : ?
