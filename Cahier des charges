@@ -35,7 +35,7 @@ d'être bléssé ou d'être victorieux lors de la probabilité de rencontrer des
 
 28/02/2018 : 2eme séance
 
-definition des attributs de l agent ( santé, capacité physique, capacité d adaptation )
+definition des attributs de l agent ( santé, capacité physique, capacité d adaptation, climat )
 definition de l environnement ( probabilité de trouver des animaux, de la nourriture, de l'eau )
 creation de variable : probabilite d'être secouru (trouver un village / equipe de secours), nombre de jours survécus
 creation des interactions :
