@@ -30,7 +30,33 @@ L'eau et la nourriture influe sur la santé, la capacité d'adaptation influe su
 d'être bléssé ou d'être victorieux lors de la probabilité de rencontrer des animaux. (dangereux)
 (Probabilité de s'etablir, à faire varier la capacité d'adaptation -> bonus santé ?/autre)
 
-Taches et répartations :  Adrien: 
-                          Luc: 
-                          Maxime : 
-                          Timotuc : 
+
+
+
+28/02/2018 : 2eme séance
+
+definition des attributs de l agent ( santé, capacité physique, capacité d adaptation )
+definition de l environnement ( probabilité de trouver des animaux, de la nourriture, de l'eau )
+creation de variable : probabilite d'être secouru (trouver un village / equipe de secours), nombre de jours survécus
+creation des interactions :
+  trouver de la nourriture : 2 sources : animaux et vegetaux
+  trouver un animal ( chose random) :
+                           plrs cas : inoffensif, donne seulement de la nourriture
+                                      legerement aggressif, donne de la nourriture et blesse
+                                      aggressif, blesse
+                                      tueur, tue l agent 
+          
+          utilise la capacite physique, prob_anim, 
+          
+  trouver des vegetaux : depend du biome
+
+
+
+
+
+
+
+
+
+
+
