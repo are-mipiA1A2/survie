@@ -35,9 +35,10 @@ d'être bléssé ou d'être victorieux lors de la probabilité de rencontrer des
 
 28/02/2018 : 2eme séance
 
-definition des attributs de l agent ( santé, capacité physique, capacité d adaptation, climat )
-definition de l environnement ( probabilité de trouver des animaux, de la nourriture, de l'eau )
-creation de variable : probabilite d'être secouru (trouver un village / equipe de secours), nombre de jours survécus
+definition des attributs de l agent ( santé, capacité physique, capacité d adaptation )
+definition de l environnement ( probabilité de trouver des animaux, de la nourriture, de l'eau, climat, infectiosité )
+creation de variable : probabilite d'être secouru (trouver un village / equipe de secours), nombre de jours survécus,
+alimentation, hydratation
 creation des interactions :
   trouver de la nourriture : 2 sources : animaux et vegetaux
   trouver un animal ( chose random) :
@@ -46,9 +47,21 @@ creation des interactions :
                                       aggressif, blesse
                                       tueur, tue l agent 
           
-          utilise la capacite physique, prob_anim, 
+          utilise la capacite physique, prob_anim, le taux d'adaptation
           
-  trouver des vegetaux : depend du biome
+  trouver des vegetaux : la quantité par zone, depend du biome, le nombre réduit lorsqu'ils sont récoltés, l'agent change de zone
+                         quand il n'y a plus de végétaux dedans.
+  
+  trouver de l'eau : dépend du biome, probabilité de trouver une source inépuisable, probabilité de trouver de l'eau simplement
+  
+  Construction d'un abri: l'abri permet à l'agent de se reposer, d'améliorer les conditions climatiques, et ainsi de restaurer
+                          sa santé. Lorsqu'il n'y a plus de végétaux, l'agent change de zone et doit refaire un abri, il 
+                          gagne une probabilité de trouver une zone habitée, la durée nécessaire pour le construire dépend du 
+                          taux d'adaptabilité. Au bout de deux changements de zone, les sources d'eau inépuisables trouvées auparavent
+                          deviennent inaccessibles.
+
+  Infections: dépend du biome, exprime la probabilité de l'agent de tomber malade au cours de la journée.
+  
 
 
 
