@@ -17,5 +17,50 @@ chose random1 (0,1,0.1)
 return alimetation, sante
 
 
+interactions vegetaux
 
+inter_veget
+
+entree: p_vg, alimentation, capadap
+sortie: alimentation
+
+while veg>0:
+  choose randoma(0,1,0,1)
+    while randoma * capadap > p_vg:
+    ###(choose randomb(0,1,0,1)
+          if randomb > p_emp * (facteur * capadap):
+      santé diminue
+    else)###
+      alimentation += 1*(facteur * capadap)
+      veg=veg-1
+      p_vg= p_vg * teta (facteur de decroissance pour trouver vegetaux)
+   end boucle
+   ****
+   santé= delta (facteur qlqconque) * alimentation
+   jour= jour+1
+   ***
+ end boucle
+ switch zone
+   
+force en fonction de l'alimentation et hydratation
+
+force_fct_hydr_alim
+ 
+ entree: alimentation, hydratation,sante
+ sortie: sante
+ 
+ if alimentation > 0,5 and hydratation >0,5
+  if sante<0,3:
+    sante = 0.3
+  else
+    sante = sante + 0,01
+ elif alimentation<0,5 
+  if hydratation<0,5:
+    sante = sante * (r(0,5-alimentation) + h(0,5- hydratation))
+  else:
+    sante = sante * r(0,5- alimentation)
+ else:
+  sante = sante * h(0,5-hydratation)
+return sante
+   
 
