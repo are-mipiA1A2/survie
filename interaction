@@ -1,0 +1,21 @@
+interaction animaux
+
+inter_anim
+
+entrée : p_a, p_ap, force, capadap, alimentation, sante
+sortie : alimentation, sante
+
+chose random1 (0,1,0.1)
+  if random1 <= p_a : 
+    
+    chose random2 (0,1,0.1)
+      if random2 <= p_ap :
+        -> inter_preda (force, capadap, alimentation, sante => alimentation, sante)
+      else :
+        alimentation up
+        
+return alimetation, sante
+
+
+
+
