@@ -63,4 +63,54 @@ force_fct_hydr_alim
   sante = sante * h(0,5-hydratation)
 return sante
    
+etre secouru
+
+  secour
+
+entree : p_s, j
+sortie : bool
+#p_s_ini : p_s initiale
+p_s_ini = p_s
+#p_s_10 : p_s a 10 jours
+p_s_10 = 0
+
+
+if j <= 10 :
+  p_s = p_s + p_s_ini*1.1
+elif j <= 25 :
+  p_s_10 = p_s
+else :
+  p_s = p_s - p_s_10*1.1
+
+
+
+
+
+boucle journaliere
+
+entree : agent biome
+sortie : nombre de jours cause de fin
+
+#c : cause de la fin
+c = ""
+#j : compteur jour
+j = 1
+while sante > 0 :
+  construction_abri
+  inter_anim
+  inter_veget
+  force_fct_hydrat_alim
+  j = j + 1
+
+
+return j, c
+
+
+
+
+
+
+
+
+
 
