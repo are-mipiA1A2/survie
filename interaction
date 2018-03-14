@@ -82,8 +82,6 @@ elif j <= 25 :
 else :
   p_s = p_s - p_s_10*1.1
 
-chose random3(0,1,0.01)
-return  random3 <= p_s
 
 
 
@@ -98,7 +96,8 @@ c = ""
 #j : compteur jour
 j = 1
 while sante > 0 :
-  construction_abri
+  jour_r , abri , sauve , sourceinf = construction_abri(capadap , veg , vegr , p_v , jour_r)
+  hydrat , sourceinf = trouver_eau (p_e , capadap , sourceinf)
   inter_anim
   inter_veget
   force_fct_hydrat_alim
