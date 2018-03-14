@@ -119,6 +119,29 @@ while veg>0:
    ***
  end boucle
  switch zone
+ 
+ 
+ def inter_veget(veg,alimentation,capadap,vegre):
+    """int*float*float=>int*float"""
+    #p_vg:float
+    p_vg=0.9
+    #trouve:bool
+    trouve=True
+    #vegr:int
+    vegr=vegre
+    if vegr == 0:
+        vegr = veg
+    rand=[random]
+    while veg>0 or trouve==True:
+        if rand * capadap < p_vg:
+            alimentation += 1*(facteur * capadap):
+            vegr = vegr - 1
+            p_vg = p_vg-1
+        else:
+            trouve=False
+    return alimentation , vegr
+   
+   
    
 force en fonction de l'alimentation et hydratation
 
