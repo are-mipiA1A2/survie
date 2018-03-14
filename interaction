@@ -54,9 +54,9 @@ chose random1 (0,1,0.1)
     
     chose random2 (0,1,0.1)
       if random2 <= p_ap :
-        -> inter_preda (force, capadap, alimentation, sante => alimentation, sante)
+         inter_pred(force, capadap, alimentation, sante)
       else :
-        alimentation up
+        alimentation = alimentation + 0.15
         
 return alimetation, sante
 
