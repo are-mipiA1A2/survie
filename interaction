@@ -40,6 +40,24 @@ chose random1 (0,1,0.1)
 return alimetation, sante
 
 
+interaction avec predateur
+
+def inter_pred(force, capadap, alimentation, sante):
+    """ float * float * float * float -> float * float 
+        hyp : random2 <= p_a
+        rend le niveau d alimentation et de sante apres une rencontre avec un animal predateur
+
+
+
+
+
+
+
+
+
+
+
+
 interactions vegetaux
 
 inter_veget
