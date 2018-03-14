@@ -82,6 +82,8 @@ elif j <= 25 :
 else :
   p_s = p_s - p_s_10*1.1
 
+chose random3(0,1,0.01)
+return  random3 <= p_s
 
 
 
