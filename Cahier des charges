@@ -71,12 +71,18 @@ creation des interactions :
 
 07/03/2018 : 3eme seance
 
-codage sur papier des differentes interactions. recherche des differents parametres pour les biomes.
-
-
-
-
-
+1er Codage des fonctions dans le dossier ''interactions''sur github. Pour l'instant on ne cherche pas à rajouter les équations qui 
+régiront le système, on se concentre principalement sur la structure des fonctions. Les interactions codés sont :
+            -construction_abri
+            -trouver_eau
+            -inter_anim
+            -inter_veget
+            -inter_pred
+            -santé_fct_hydr_alim
+            -boucle journaliere
+  
+          
+ 
 
 
 
