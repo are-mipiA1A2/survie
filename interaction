@@ -4,18 +4,17 @@ def construction_abri(cap , source_inf , vegr , veg , s , jourres , abri):
   sauve = False
   #rand:float
   if jourres == -10 or vegr == 0:
-    jourres = (veg/cap)/7
+    jourres = (veg/cap)//7
     abri = False
-    sourceinf = False
+    source_inf = False
     rand = [Random]
     if rand < s:
       sauve = True
-  if jourres != 0:
+  if jourres != 0 and jourres !=1:
     jourres = jourres - 1
   else:
     abri = True
   return jourres , abri , sauve , source_inf
-
 
 
 
