@@ -15,6 +15,7 @@ Variables: Biomes: _Probabilité de tomber sur des animaux: p_a
                    _Probabilité que l'animal soit un prédateur: p_ap
                    _Quantité de kilos de végétaux par zone (1km de rayon): veg
                    _Probabilité d'être secouru: p_s
+                   _Probabilité village: p_v
                    _Probabilité de trouver de l'eau: p_e
                    
            Agent: _Santé: sante
