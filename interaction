@@ -114,9 +114,9 @@ j = 1
 while sante > 0 or sauve != 0 :
   jour_r , abri , sauve , sourceinf = construction_abri(capadap , veg , vegr , p_v , jour_r)
   hydrat , sourceinf = trouver_eau (p_e , capadap , sourceinf)
-  inter_anim
-  inter_veget
-  force_fct_hydrat_alim
+  alimentation, sante = inter_anim(p_a, p_ap, force, capadap, alimentation, sante)
+  alimentation = inter_veget(p_vg, alimentation, capadap)
+  sante = force_fct_hydrat_alim(alimentation, hydrat, sante)
   j = j + 1
 
 
