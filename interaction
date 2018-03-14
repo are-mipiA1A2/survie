@@ -20,19 +20,22 @@ def construction_abri(cap , source_inf , vegr , veg , s , jourres , abri):
 
 
 def trouver_eau(p_eau , capadap , source_inf , hydrat):
-  """float*float*bool*float => bool*float"""
-  if source_inf == 1:
-    hydrat = 1
-  else:
-    rand = [random]
-    if rand <= 0.4*p_e:
-      hydrat = hydrat + 0.3
-    elif rand <= p_e :
-      hydrat = hydrat + 0.6
-      rand = [random]
-      if rand > 0.4:
-        source_inf = True
-  return source_inf , hydrat
+    """float*float*bool*float => bool*float"""
+    if source_inf == 1:
+        hydrat = 1
+    else:
+        rand = 0.39
+    if rand <= 0.4*p_eau*(2*capadap):
+        hydrat = hydrat + 0.2
+    elif rand <= p_eau*(2*capadap) :
+        hydrat = hydrat + 0.4
+        rand = 0.3
+        if rand > 0.4:
+            source_inf = True
+    if hydrat > 1:
+        hydrat = 1
+    return source_inf , hydrat
+
 
 
 
