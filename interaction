@@ -95,7 +95,7 @@ sortie : nombre de jours cause de fin
 c = ""
 #j : compteur jour
 j = 1
-while sante > 0 :
+while sante > 0 or sauve != 0 :
   jour_r , abri , sauve , sourceinf = construction_abri(capadap , veg , vegr , p_v , jour_r)
   hydrat , sourceinf = trouver_eau (p_e , capadap , sourceinf)
   inter_anim
