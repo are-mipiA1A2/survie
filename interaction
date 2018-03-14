@@ -1,17 +1,21 @@
-def construction_abri(cap , eau , vegr , veg , s , jourres , abri):
+def construction_abri(cap , source_inf , vegr , veg , s , jourres , abri):
   """float*float*int*float*int*bool => bool*int*bool*bool"""
+  #sauve:bool
+  sauve = False
+  #rand:float
   if jourres == -10 or vegr == 0:
-    jourres = (equa jourres)
+    jourres = (veg/cap)/7
     abri = False
     sourceinf = False
-    rand = [random]
+    rand = [Random]
     if rand < s:
-      sauve == True
+      sauve = True
   if jourres != 0:
     jourres = jourres - 1
   else:
     abri = True
   return jourres , abri , sauve , source_inf
+
 
 
 
