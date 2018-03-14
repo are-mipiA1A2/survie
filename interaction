@@ -120,7 +120,7 @@ while veg>0:
    
 force en fonction de l'alimentation et hydratation
 
-force_fct_hydr_alim
+sante_fct_hydr_alim
  
  entree: alimentation, hydratation,sante
  sortie: sante
