@@ -21,8 +21,6 @@ capacité d'adaptation, capacité physique, santé.
 
 On envoie ensuite ces agents dans des biomes caractérisés par des paramètres.
 
-biomes : probabilité de rencontre avec des animaux(dangereux ou pas) , nourriture,eau, climat.
-
 Interactions : Probabilité de trouver de l'eau,  Probabilité de trouver de la nourriture,  Probabilité de tomber sur des animaux,
 Probabilité d'être sécouru. 
 En fonction des différents parametres de l'agent et du biome, ces probabilités vont varier.
