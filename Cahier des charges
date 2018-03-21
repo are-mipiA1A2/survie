@@ -81,7 +81,11 @@ régiront le système, on se concentre principalement sur la structure des fonct
   
           
  
+21/03/2018
 
+premiere finition du modele finale sans complexite , creation de dictionnaire pour les agents et les biomes.
+toutes les interactions sont créées, on etablit des valeurs realistes pour les facteurs dans les equations.
+correction du modele finale car probleme au niveau de la creation de l'abri, ainsi que pour l equipe de secours
 
 
 
