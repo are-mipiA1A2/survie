@@ -65,32 +65,24 @@ return alimetation, sante
 
 interaction avec animal dangereux
 
-def inter_pred(force, capadap, alimentation, sante):
+def inter_pred(force, cap, alimentation, sante):
     """
     float * float * float * float -> float * float 
     hyp : random2 <= p_a
     rend le niveau d alimentation et de sante apres une rencontre avec un animal dangereux 
     """
-    #force_1 : int
-    force_1 = force - 0.4 + 1
-    
-    #capadap_1 : int
-    capadap_1 = capadap - 0.3 + 1
-    
-    
-    chose random4(0,1)
-    combat = random4*force_1*capadap_1
 
+    random4=np.random.random_sample()
+    combat = random4*(force+0.5)*(cap+0.5)
     if combat <= 0.1 :
-        sante = 0
+        sante = 0 
     elif combat <=0.4 :
-        sante = sante - ((1-10*(random4-0.1)/3)/2)
+        sante = sante - (1-force)*(1-cap)*0.5
     elif combat <= 0.7 : 
-        sante = sante - ((1-10*(random4-0.1)/3)/2)
-        alimentation = alimentation + 0.15
+        sante =sante - (1-force)*(1-cap)*0.4
+        alimentation = alimentation + 0.15 
     else :
         alimentation = alimentation + 0.15
-
     return alimentation, sante
 
 
