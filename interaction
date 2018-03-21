@@ -1,20 +1,23 @@
 def construction_abri(cap , source_inf , vegr , veg , s , jourres , abri):
-  """float*float*int*float*int*bool => bool*int*bool*bool"""
-  #sauve:bool
-  sauve = False
-  #rand:float
-  if jourres == -10 or vegr == 0:
-    jourres = (veg/cap)//7
-    abri = False
-    source_inf = False
-    rand = [Random]
-    if rand < s:
-      sauve = True
-  if jourres != 0 and jourres !=1:
-    jourres = jourres - 1
-  else:
-    abri = True
-  return jourres , abri , sauve , source_inf
+    """float*bool*int*float*int*bool => bool*int*bool*bool"""
+    #sauve:bool
+    sauve = False
+    #rand:float
+    if jourres != 0:
+        jourres = jourres - 1
+    else:
+        abri = True
+    if jourres == -11 or vegr == 0:
+        jourres = ((45/(cap*0.5)//10 * 1/(veg/5)))/1.
+        abri = False
+        source_inf = False
+        rand = np.random.random_sample()
+        if rand < s:
+            sauve = True
+    jourres = jourres//1
+    if cap >= 0.9 and veg > 1 :
+        jourres = 1.0
+    return jourres , abri , sauve , source_inf
 
 
 
