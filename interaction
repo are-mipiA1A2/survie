@@ -149,20 +149,22 @@ while veg>0:
 force en fonction de l'alimentation et hydratation
 
 def sante_fct_hydr_alim(alimentation,hydratation,sante):
-"""float³=>float"""
- 
-    if alimentation > 0,5 and hydratation >0,5:
-        if sante<0,3:
+    """float³=>float
+    force en fonction de l'alimentation et hydratation"""
+    if alimentation >= 0.5 and hydratation >=0.5:
+        if sante<0.3:
               sante = 0.3
         else:
-              sante = sante + 0.01
-    elif alimentation<0,5 :
-        if hydratation<0,5:
-            sante = sante * (r(0,5-alimentation) + h(0,5- hydratation))
+              sante = sante + 0.1
+    elif alimentation<0.5 :
+        if hydratation<0.5:
+            sante = sante - ((0.5-alimentation)*0.5 + (0.5-hydratation)*0.8)
+        else:
+            sante = sante - (0.5-alimentation)*0.4
     else:
-        sante = sante * r(0,5- alimentation)
-    else:
-        sante = sante * h(0,5-hydratation)
+        sante = sante - (0.5-hydratation)*0.84
+    if sante > 1.0 :
+        sante = 1.0
     return sante
    
 etre secouru
