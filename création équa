@@ -32,8 +32,7 @@ def inter_pred(force, capadap, alimentation, sante):
     
     #capadap_1 : int
     capadap_1 = capadap - 0.3 + 1
-    
-    bitefdpdu
+   
     
     random4=np.random.random_sample()
     combat = random4*force_1*capadap_1
