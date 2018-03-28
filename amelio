@@ -1,0 +1,12 @@
+sante au jour 1 suite au crash (situation initiale)
+
+def sante_ini(sante):
+  """
+  float -> float
+  retourne la sante de l'agent au jour 1 au debut de la simulation
+  """
+  #rand:float
+  rand = np.random.random_sample()
+  if rand < 0.8 :
+    sante = 0.8
+  return sante
