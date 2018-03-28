@@ -7,6 +7,6 @@ def sante_ini(sante):
   """
   #rand:float
   rand = np.random.random_sample()
-  if rand < 0.8 :
+  if rand > 0.8 :
     sante = 0.8
   return sante
