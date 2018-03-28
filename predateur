@@ -1,0 +1,39 @@
+dictionnaire_predateur["nom"]=(force_p, detection, vitesse, alimentation_p, hydrat_p)
+
+def nourriture_p(p_a, alimentation_p, p_e, hydrat_p):
+    """
+    float^4 -> float^2
+    retourne le niveau d alimentation et d hydratation du predateur
+    """
+    
+    rand = np.random.random_sample()
+    if rand <= 1.5*p_a:
+        alimentation_p = alimentation_p + 0.15
+    if alimentation_p >1 :
+        alimentation_p = 1
+    if rand <= 1.3*p_e:
+        hydrat_p = hydrat_p + 0.4
+    if hydrat_p > 1:
+        hydrat_p = 1
+    return alimentation_p,hydrat_p
+    
+def ev_nourriture_p(alimentation_p, hydrat_p):
+    """
+    float^2 -> float^2
+    retourne le niveau d alimentation du predateur jour apres jour
+    """
+    alimentation_p = alimentation_p - 0.1
+    hydrat_p = hydrat_p - 0.3
+    return alimentation_p, hydrat_p
+    
+def mort_p_nourriture(alimentation_p, hydrat_p)
+    """
+    float^2 -> bool
+    retourne si le predateur meurt de faim ou deshydratation
+    """
+    if alimentation_p <= 0 or hydrat_p <=0 :
+        return True
+    else :
+        return False
+    
+def chasse(
