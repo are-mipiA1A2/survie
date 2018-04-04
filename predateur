@@ -1,4 +1,4 @@
-dictionnaire_predateur["nom"]=(force_p, detection, vitesse, alimentation_p, hydrat_p)
+dictionnaire_predateur["nom"]=(dang_p, detection, vitesse, alimentation_p, hydrat_p)
 
 def nourriture_p(p_a, alimentation_p, p_e, hydrat_p):
     """
@@ -36,4 +36,27 @@ def mort_p_nourriture(alimentation_p, hydrat_p)
     else :
         return False
     
-def chasse(detection) :
+def combat_p_h(force,cap,dang_p,sante):
+    """
+    float^4 -> float * bool
+    retourne l'issue du combat entre le predateur et l'humain
+    """
+    rand = np.random.random_sample()
+    res = rand*(dang_p+0.4)*(cap-0.5 + force-0.5)
+    
+    
+    tue le pred sans etre blesse : 0 - 0.16
+    tue le pred et se blesse : 0.16 - 0.33
+    blesse le pred sans etre blesse : 0.33 - 0.50
+    blesse le predet est blesse 0.50 - 0.66
+    est tue et blesse le pred : 0.66 - 0.8
+    est tue sans blesse le pred : 0.8 - 1.0
+
+
+
+
+
+
+
+
+
