@@ -1,0 +1,33 @@
+Liste des agents :
+
+agent humain : 
+  -rôle : objet d'étude, on étudie combien de jours l'agent survit dans un milieu hostile
+  -actions de l'agent : 
+                       - construction d'un abri
+                       - chercher de l'eau & trouver source (infinie)
+                       - chercher des végetaux (manger)
+                       - chasser des animaux (dangereux ou pas)
+                       - change de zone et d'abri quand vegetaux épuisés
+                       - rencontre le Prédateur & combat avec le Prédateur
+  -attributs de l'agent :
+                      - voir tableau excel
+                  
+agent Prédateur :
+  -rôle : defend son territoire et chasse l humain s il le rencontre
+  -actions de l'agent :
+                        - change de zone chaque jour    
+                        - chasse des animaux
+                        - trouver de l'eau
+                        - sent l'humain dans un rayon d'une zone autour de lui
+                        - se déplace vers l'humain quand il l'a senti
+                        - combat avec l'humain
+ -attributs de l'agent :
+                      - voir tableau excel
+
+Environnment : 
+    
+artefacts : zone - position(i,j)
+                 - nombre de vegetaux
+                 - abri
+                 - source infinie
+                 - probabilité       
