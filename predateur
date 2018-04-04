@@ -36,4 +36,4 @@ def mort_p_nourriture(alimentation_p, hydrat_p)
     else :
         return False
     
-def chasse(
+def chasse(detection) :
