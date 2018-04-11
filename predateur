@@ -54,7 +54,95 @@ def combat_p_h(force,cap,dang_p,sante):
 
 
 
+ -----------
+ 
+ def inter_pred(force, cap, alimentation, sante):
+    """
+    float * float * float * float -> float * float 
+    hyp : random2 <= p_a
+    rend le niveau d alimentation et de sante apres une rencontre avec un animal dangereux 
+    """
 
+    random4=np.random.random_sample()
+    combat = random4*(force+0.5)*(cap+0.5)
+    if combat <= 0.1 :
+        sante = 0 
+    elif combat <=0.4 :
+        sante = sante - (1-force)*(1-cap)*0.5
+    elif combat <= 0.7 : 
+        sante =sante - (1-force)*(1-cap)*0.4
+        alimentation = alimentation + 0.15 
+    else :
+        alimentation = alimentation + 0.15
+    return alimentation, sante
+    
+    
+    def combat_p_h(force,cap,dang_p,sante):
+    """
+    float^4 -> float * bool
+    retourne l'issue du combat entre le predateur et l'humain
+    """
+    mort=False
+    rand = np.random.random_sample()
+    res = rand*(dang_p+0.45)*(cap-1.65)*(force-1.65)
+        
+    
+    return res
+    
+    
+    def sante_apres_combat(res,alimentation,sante,alimentation_p,sante_p):
+    """
+    float ^5 -> float ^4 * str
+    retourne le niveau de sante et d alimentation en fonction de l'issue du combat, 
+    et la cause de la mort si l agent humain meurt
+    """
+    #c : str
+    c=""
+    if res < 0.16 :
+        alimentation = alimentation + 0.15
+        sante_p = 0
+        c = "le prédateur est tué par l'humain"
+    elif res < 0.33 :
+        alimentation = alimentation + 0.15
+        sante = sante - res
+        sante_p = 0
+        c = " le prédateur est tué par l'humain"
+    elif res < 0.5 :
+        sante_p = sante_p - (1 - res)
+    elif res < 0.66 :
+        sante = sante - res
+        sante_p = sante_p - (1 - res)
+    elif res < 0.8 :
+        sante = 0
+        sante_p = sante_p - (1 - res)
+        c = "l'humain est tué par le prédateur"
+    else :
+        sante = 0
+        c = "l'humain est tué par le prédateur"
+    return alimentation, sante, alimentation_p, sante_p , c 
+    
+    
+    def sante_fct_hydr_alim_p(alimentation_p, hydrat_p, sante_p):
+    """
+    float ^3 -> float
+    retourne la sante du prédateur en fonction de son alimentation et hydratation
+    """
+    
+    if alimentation_p >= 0.5 and hydrat_p >=0.5:
+        if sante_p<0.3:
+              sante_p = 0.3
+        else:
+              sante_p = sante_p + 0.1
+    elif alimentation_p < 0.5 :
+        if hydrat_p < 0.5:
+            sante_p = sante_p - ((0.5-alimentation_p)*0.5 + (0.5-hydrat_p)*0.8)
+        else:
+            sante_p = sante_p - (0.5-alimentation_p)*0.4
+    else:
+        sante_p = sante_p - (0.5-hydrat_p)*0.84
+    if sante_p > 1.0 :
+        sante_p = 1.0
+    return sante_p
 
 
 
