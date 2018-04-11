@@ -145,6 +145,25 @@ def combat_p_h(force,cap,dang_p,sante):
     return sante_p
 
 
+-----------------------
 
+def combat_p_p(dang_p1,dang_p2,sante_p1,sante_p2):
+    """
+    float ^4 -> float ^2 
+    retourne un combat entre 2 predateurs
+    """
+    
+    rand = np.random.random_sample()
+    comb = rand*(1 + dang_p1 - dang_p2)
+    if comb < 0.5 :
+        sante_p1 = sante_p1 - 0.2
+        sante_p2 = 0
+        dang_p1 = dang_p1 + 0.05
+        return sante_p1, dang_p1
+    else :
+        sante_p1 = 0
+        sante_p2 = sante_p2 - 0.2
+        dang_p2 = dang_p2 + 0.05
+        return sante_p2, dang_p2
 
 
