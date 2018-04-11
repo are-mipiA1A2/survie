@@ -1,1 +1,5 @@
-
+#dictionnaire_predateur:dict[str:tuple[float]]
+dictionnaire_predateur={}
+dictionnaire_predateur["jaguar"]=(0.7)      -> amazonie
+dictionnaire_predateur["guepar"]=(0.7)      -> sahara
+dictionnaire_predateur["grizzly"]=(0.9)     -> alaska
