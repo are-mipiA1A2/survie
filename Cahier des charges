@@ -60,11 +60,11 @@ creation des interactions :
 
   Infections: dépend du biome, exprime la probabilité de l'agent de tomber malade au cours de la journée.
   
-  Biomes : p_a, p_ap, veg, p_eau, p_v, p_s
-  Forêt Amazonienne : 0.65, 0.5, 33, 0.7, 0.03571428571, 0.07142857142
-  Forêt Alaska : 0.38 , 0.25 , 18, 0.6 ,0.0043185564, 0.0086371128 
-  Centre de la France : 0.3 , 0.05 , 17, 0.6, 0.3 0.6
-  Desert du Sahara : 0.25, 0.5, 1, 0.1, 1/30, 1/15
+  Biomes : p_a, nb_p (10*10), veg, p_eau, p_v, p_s
+  Forêt Amazonienne : 0.65, 8, 33, 0.7, 0.03571428571, 0.07142857142
+  Forêt Alaska : 0.38 , 5 , 18, 0.6 ,0.0043185564, 0.0086371128 
+  Centre de la France : 0.3 , 1 , 17, 0.6, 0.3 0.6
+  Desert du Sahara : 0.25, 6, 1, 0.1, 1/30, 1/15
   
 
 07/03/2018 : 3eme seance
